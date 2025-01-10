@@ -1,0 +1,176 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/formLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:padding="16dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:text="按你的喜好开始DIY吧~" />
+        <!-- Single choice for number of dishes -->
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/purple"
+                android:text="想吃几道菜" />
+        <RadioGroup
+                android:id="@+id/dishCountRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <RadioButton android:id="@+id/dishCount1" android:checked="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" />
+            <RadioButton android:id="@+id/dishCount2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2" />
+            <RadioButton android:id="@+id/dishCount3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3" />
+            <RadioButton android:id="@+id/dishCount4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4" />
+            <RadioButton android:id="@+id/dishCount5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5" />
+            <RadioButton android:id="@+id/dishCount6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="6" />
+        </RadioGroup>
+
+        <!-- Single choice for spiciness level -->
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/purple"
+                android:text="想吃的辣度" />
+        <RadioGroup
+                android:id="@+id/spicinessRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <RadioButton android:id="@+id/spicinessNone" android:checked="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="不辣" />
+            <RadioButton android:id="@+id/spicinessMild" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="微辣" />
+            <RadioButton android:id="@+id/spicinessMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="中辣" />
+            <RadioButton android:id="@+id/spicinessHot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="特辣" />
+        </RadioGroup>
+
+        <!-- Multiple choice for meat preferences -->
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/purple"
+                android:text="想吃的肉类" />
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <CheckBox android:id="@+id/meatPork" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="猪肉" />
+            <CheckBox android:id="@+id/meatBeef" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="牛肉" />
+            <CheckBox android:id="@+id/meatChicken" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="鸡肉" />
+            <CheckBox android:id="@+id/meatFish" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="鱼肉" />
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <CheckBox android:id="@+id/meatLamb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="羊肉" />
+            <CheckBox android:id="@+id/meatDuck" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="鸭肉" />
+            <CheckBox android:id="@+id/meatShrimp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="虾肉" />
+            <CheckBox android:id="@+id/meatOther" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="随便" />
+        </LinearLayout>
+
+        <!-- Multiple choice for vegetable preferences -->
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/purple"
+                android:text="想吃的蔬菜" />
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <CheckBox android:id="@+id/vegetableCabbage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="白菜" />
+            <CheckBox android:id="@+id/vegetableWaterSpinach" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="空心菜" />
+            <CheckBox android:id="@+id/vegetableCarrot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="胡萝卜" />
+            <CheckBox android:id="@+id/vegetableSpinach" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="菠菜" />
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <CheckBox android:id="@+id/vegetableMushroom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="平菇" />
+            <CheckBox android:id="@+id/vegetableEnoki" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="金针菇" />
+            <CheckBox android:id="@+id/vegetableBeanSprout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="豆芽" />
+            <CheckBox android:id="@+id/vegetableOther" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="随便" />
+        </LinearLayout>
+
+        <!-- Multiple choice for food restrictions -->
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/purple"
+                android:text="忌口" />
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <CheckBox android:id="@+id/restrictionOnion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="葱" />
+            <CheckBox android:id="@+id/restrictionGinger" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="姜" />
+            <CheckBox android:id="@+id/restrictionGarlic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="蒜" />
+            <CheckBox android:id="@+id/restrictionCilantro" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="香菜" />
+            <CheckBox android:id="@+id/restrictionPepper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_size_diy_choice" android:text="花椒" />
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/askButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:textSize="30sp"
+                android:layout_gravity="center"
+                android:text="开始DIY" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/resultLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:visibility="gone">
+
+        <TextView
+                android:id="@+id/closeButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/round_button"
+                android:text="×"
+                android:textSize="30sp"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:layout_gravity="end" />
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:id="@+id/resultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:paddingTop="16dp" />
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- ProgressBar for loading animation -->
+    <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+</FrameLayout>

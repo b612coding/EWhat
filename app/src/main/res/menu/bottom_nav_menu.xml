@@ -1,0 +1,15 @@
+<!-- res/menu/bottom_nav_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="主页" />
+    <item
+            android:id="@+id/nav_diy"
+            android:icon="@drawable/ic_diy"
+            android:title="DIY" />
+    <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="设置" />
+</menu>
